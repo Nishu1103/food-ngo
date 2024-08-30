@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "https://ngo-l8vg-git-main-nishants-projects-98505dc9.vercel.app/api/v1/user/logout",
+        "https://ngo-l8vg.vercel.app/api/v1/user/logout",
         {
           withCredentials: true,
         }
