@@ -22,8 +22,16 @@ const Navbar = () => {
       createToast(response.data.message, "success");
       setIsAuthorized(false);
       navigateTo("/login");
+      await new Promise((resolve) => {
+            localStorage.clear();
+            resolve();
+        });
     } catch (error) {
       createToast(error.response.data.message, "error"), setIsAuthorized(true);
+      await new Promise((resolve) => {
+            localStorage.clear();
+            resolve();
+        });
     }
   };
 
